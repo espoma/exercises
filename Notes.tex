@@ -1,0 +1,319 @@
+\documentclass[12pt,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{comment}
+\usepackage{microtype}
+%\interlinepenalty 10000
+\usepackage[english]{babel}
+\usepackage{graphicx} 
+\usepackage{epsf}
+\usepackage{a4}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage[font={normalsize,it},labelfont={bf,up},margin=2pc,labelsep=newline]{caption}[2004/07/16]
+\usepackage{textgreek}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{bm}
+\usepackage{authblk}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{braket}
+%\usepackage{cite}
+\usepackage{multirow}
+\usepackage{ulem}
+\usepackage{siunitx}
+\usepackage{pgfplots}
+%\usepackage{subcaption}
+\pgfplotsset{compat=1.17, width=10cm}
+\usepackage{tikz}
+\usetikzlibrary{
+	decorations.pathmorphing,
+	patterns,
+	angles,
+	decorations.pathmorphing,
+	calligraphy,% had to be after decorations.pathreplacing
+	patterns.meta,
+	quotes,
+	shapes,
+	arrows,
+	snakes,
+	backgrounds,
+	arrows.meta, % for nice-looking arrows
+	decorations.text % for the arc-text in logo
+	}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[makeroom]{cancel}
+\usepackage{bbold}
+\pgfplotsset{compat = newest}
+
+\usepackage[colorlinks]{hyperref} %links e segnalibri pdf
+\hypersetup{
+	colorlinks=true,
+	linkcolor=red,
+	citecolor=red,
+	anchorcolor=red,
+	linktocpage=true,
+	pageanchor=true,
+	pdfauthor={Marco Esposito},
+	pdfcreator={Marco Esposito},
+	pdftitle={Maths and Physics Notes}}
+\usepackage{url}	
+\usepackage{cleveref}
+\urlstyle{same}
+\usepackage{blindtext}
+%\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref} %link e segnalibri pdf
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{exercise}
+
+
+%\usepackage[font=footnotesize,labelfont=bf]{caption}
+
+
+
+
+
+
+\begin{comment}
+\usepackage [a4paper,
+left=4cm,
+bottom=3.5cm,
+right=4cm,
+top=3.cm]{geometry}
+\end{comment}
+
+
+%edit chapters etc
+\usepackage[center]{titlesec}
+\titleformat*{\chapter}{\bfseries\scshape\LARGE\raggedleft}
+\titleformat*{\section}{\bfseries\itshape\scshape\large\raggedright}
+\titleformat*{\subsection}{\bfseries\raggedright}
+
+
+
+
+
+\begin{comment}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO,LE]{Mutations and disorder in cellular systems}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Chapter \thechapter}
+\fancyfoot[CO,RE]{Marco Esposito}
+\end{comment}
+
+%\usepackage{geometry} % to change the page dimensions
+%\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customizable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+%\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+%\pagestyle{fancy} % options: empty , plain , fancy
+%\renewcommand{\headrulewidth}{0pt} % customise the layout...
+%\lhead{}\chead{}\rhead{}
+%\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%\usepackage{sectsty}
+%\allsectionsfont{\mdseries\upshape} 
+%\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage[titles,subfigure]{tocloft} 
+\usepackage{relsize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% PERSONAL RE-DEFINITIONS %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+%\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+%\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} 
+\newcommand*{\hham}{\mathcal{H}}
+\newcommand*{\xx}{\vec{x}}
+\newcommand*{\kk}{\vec{k}}
+\newcommand*{\qq}{\vec{q}}
+\newcommand*{\p}{\varphi}
+\newcommand*{\zpart}{\mathcal{Z}}
+\newcommand*{\w}{\Bigl}
+\newcommand*{\lapint}{\int_{a-i\infty}^{a+i\infty}\frac{dz}{2\pi i}}
+\newcommand{\Var}{\mathrm{Var}}
+
+\def\cit{\hbox{\bfseries citations}}
+\def\lcit{\hbox{\bfseries list and citations}}
+
+\def\etc{\hbox{\it etc.}}
+\def\ie{\hbox{\it i.e.}}
+\def\nn{\nonumber}
+
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+\def\tz{\tilde{Z}}
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+
+\newcommand{\abs}[1]{|\, #1 \,|}
+\newcommand{\br}[1]{ \langle \, #1 \, | }
+\newcommand{\ke}[1]{ | \, #1 \, \rangle }
+\newcommand{\bk}[2]{\langle \, #1 \, | \, #2 \, \rangle}
+\newcommand{\mean}[1]{\langle \, #1 \, \rangle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand*{\mybox}[1]{\boxed{#1}}
+
+\newcommand{\epv}{expectation value }
+
+\definecolor{espomacolor}{rgb}{.0,.5,.1}
+\newcommand{\me}{\textcolor{espomacolor}}
+
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{plain}
+\newtheorem{postulate}{Postulate}[section]
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\graphicspath{{./images/}}
+
+
+\title{
+{Notes}
+}
+\author{Marco Esposito}
+\date{}
+
+%\setstretch{1.5}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+% \lhead{Marco's stuff}
+% \rhead{Ciao a tutti}
+% \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\itshape\thesection \ -- #1}}
+\fancyhf{} 
+\fancyhead[LE,RO]{\small\bfseries\thepage}
+\fancyhead[LO]{\small\rightmark}
+\fancyhead[RE]{\mdseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{1pt}
+\fancypagestyle{plain}{
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+}
+\usepackage[center]{titlesec}
+\titleformat*{\chapter}{\bfseries\scshape\LARGE\raggedleft}
+\titleformat*{\section}{\bfseries\itshape\scshape\large\raggedright}
+\titleformat*{\subsection}{\bfseries\raggedright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\chapter*{Dedication}
+To all the Physics and Mathematics students. 
+
+% Acknowledgements
+%\input{Acknowledgements/acknowledgements.tex}
+
+% Foreword 
+%\input{./Foreword/foreword.tex}
+
+\tableofcontents
+
+\mainmatter
+
+\input{prove.tex}
+
+\part{Theory} 
+% Linear Algebra - Theory
+%\input{./linear-algebra.tex}
+
+
+%\input{Geometrical Anatomy of Theoretical Physics/geometrical-anatomy-th-physics.tex}
+
+
+\part{Problems}
+% Classical Mechanics - Problems
+%\input{./Classical Mechanics/classical-mechanics.tex}
+
+% Thermodynamics - Problems
+%\input{./Thermodynamics/thermodynamics.tex}
+
+% Quantum Mechanics - Problems
+\input{./Quantum Mechanics/quantum-mechanics.tex}
+
+\backmatter
+
+\clearpage
+\bibliography{notes} 
+\bibliographystyle{plain}
+
+\end{document}
+~
+
+
+
+
+
+
+
+
+\section{THINGS TO DO}
+
+
+
+
+
+
